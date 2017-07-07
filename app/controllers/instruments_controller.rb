@@ -1,6 +1,6 @@
 class InstrumentsController < ApplicationController
   def index
-    @instruments = Instrument.paginate(:page => params[:page], :per_page => 8)
+    @instruments = Instrument.all
   end
 
   def show
