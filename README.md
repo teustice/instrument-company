@@ -18,9 +18,9 @@ $ rails db:schema:load
 ## Page Views
 
 _landing page:_
-![](https://github.com/teustice/drone-race-management/blob/master/src/assets/img/Screen%20Shot%202017-06-29%20at%201.03.20%20PM.png)
+![](https://github.com/teustice/instrument-company/blob/master/app/assets/images/Screen%20Shot%202017-07-07%20at%203.52.37%20PM.png)
 _products page:_
-![](https://github.com/teustice/drone-race-management/blob/master/src/assets/img/Screen%20Shot%202017-06-29%20at%201.03.30%20PM.png)
+![](https://github.com/teustice/instrument-company/blob/master/app/assets/images/Screen%20Shot%202017-07-07%20at%204.26.23%20PM.png)
 
 ## Further help
 
