@@ -18,6 +18,16 @@
 body {
   background-color: #b19cd9;
 }
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+a:hover {
+  color: black;
+}
+
  .navbar {
   background-color: black;
   color: white;

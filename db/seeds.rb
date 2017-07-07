@@ -20,7 +20,10 @@ Review.destroy_all
       user_id: newUser.id)
   end
 end
-
+# create admin
+User.create(email: 'admin@admin',
+                      password: 'password',
+                      admin: true)
 
 p "Created #{User.count} users"
 p "Created #{Instrument.count} instruments"
