@@ -1,0 +1,21 @@
+<%= render "layouts/errors", :object => @review %>
+
+<%= form_for(@review, :as => :review, :url => instrument_reviews_path)  do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %> <br>
+  <%= f.label :content %>
+  <%= f.text_area :content %> <br>
+
+  <%= f.label :rating %>
+  <%= f.radio_button :rating, 1, id: "v_1" %>
+  <label for = "v_1">1</label>
+  <%= f.radio_button :rating, 2, id: "v_2" %>
+  <label for = "v_2">2</label>
+  <%= f.radio_button :rating, 3, id: "v_3" %>
+  <label for = "v_3">3</label>
+  <%= f.radio_button :rating, 4, id: "v_4" %>
+  <label for = "v_4">4</label>
+  <%= f.radio_button :rating, 5, id: "v_5" %>
+  <label for = "v_5">5</label>
+  <%= f.submit %>
+<% end %>

@@ -2,3 +2,10 @@
 <%= @instrument.brand %>
 <%= @instrument.description %>
 <%= @instrument.price %>
+
+<%= link_to "Add a review", new_instrument_review_path(@instrument.id) %>
+
+<h3>Reviews:</h3>
+<% @instrument.reviews.each do |review| %>
+  <p><%= review.title %> | <%= review.content %> | <%= review.rating %> | <%= review.author %></p>
+<% end %>
