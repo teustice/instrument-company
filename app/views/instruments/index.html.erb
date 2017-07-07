@@ -1,5 +1,4 @@
-<%= link_to "Add an Instrument", new_instrument_path %>
-
+<h1>instrument gallery</h1>
 <% @instruments.each do |instrument| %>
   <%= link_to image_tag(instrument.image), instrument_path(instrument) %>
   <%= instrument.description  %>
