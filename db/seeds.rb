@@ -2,7 +2,7 @@ User.destroy_all
 Instrument.destroy_all
 Review.destroy_all
 
-10.times do |index|
+50.times do |index|
   newUser = User.create(email: Faker::Internet.email,
                         password: Faker::Internet.password(10, 20))
 

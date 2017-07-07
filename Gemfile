@@ -30,6 +30,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'faker'
 gem 'rails_admin', '~> 1.2'
 gem 'tachyons-rails'
+gem 'will_paginate', '~> 3.1.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
