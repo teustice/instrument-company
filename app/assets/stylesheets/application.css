@@ -15,6 +15,9 @@
  *= require tachyons
  */
 
+body {
+  background-color: #b19cd9;
+}
  .navbar {
   background-color: black;
   color: white;

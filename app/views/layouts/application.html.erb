@@ -14,8 +14,9 @@
         <% if current_user %>
           <p>Welcome <%= current_user.email %> |
           <% if isAdmin? %>
-            <%= link_to "admin dashboard", rails_admin_path %>
-          <%end %> |
+            <%= link_to "admin dashboard", rails_admin_path %> |
+          <%end %>
+          <%= link_to "home", root_path %> |
           <%= link_to "products", instruments_path %> |
             <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
           </p>
