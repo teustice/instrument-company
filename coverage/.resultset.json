@@ -523,11 +523,12 @@
         null,
         null,
         null,
+        1,
+        0,
+        0,
         null,
         null,
-        null,
-        null,
-        null,
+        1,
         null,
         null,
         null,
@@ -595,6 +596,9 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -615,6 +619,9 @@
       ],
       "/Users/tanner/Desktop/guitar/app/helpers/application_helper.rb": [
         1,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/tanner/Desktop/guitar/app/models/instrument.rb": [
@@ -654,6 +661,6 @@
         null
       ]
     },
-    "timestamp": 1499447039
+    "timestamp": 1499454487
   }
 }

@@ -1,11 +1,35 @@
-<%= image_tag @instrument.image %>
-<%= @instrument.brand %>
-<%= @instrument.description %>
-<%= @instrument.price %>
 
-<%= link_to "Add a review", new_instrument_review_path(@instrument.id) %>
 
-<h3>Reviews:</h3>
-<% @instrument.reviews.each do |review| %>
-  <p><%= review.title %> | <%= review.content %> | <%= review.rating %> | <%= review.author %></p>
-<% end %>
+
+<article class="">
+  <h1 class="f2"><%= @instrument.brand %></h1>
+  <img src="<%= @instrument.image %>" class="w-100 f5 measure" alt="image missing">
+  <p class="">
+    $<%= @instrument.price %>
+  </p>
+  <p class="">
+    <%= @instrument.description %>
+  </p>
+  <br>
+  <br>
+  <% if current_user %>
+  <%= link_to "Add a review", new_instrument_review_path(@instrument.id) %>
+  <% else %>
+  <p>To leave a review, <%= link_to "sign in", new_user_session_path %></p>
+  <% end %>
+
+  <% if @instrument.reviews.any? %>
+  <h3>Reviews:</h3>
+  <% @instrument.reviews.each do |review| %>
+    <ul class="list">
+      <li class="pa3 pa4-ns bb b--black-10">
+        <b class="db f4 mb1"><%= review.title %> - <%= review.rating %>★</b>
+        <span class="f5 db"> <%= review.content %> </span>
+        <span class="f5 db"> <em>by -<%= review.author %></em> </span>
+      </li>
+    </ul>
+  <% end %>
+  <% else %>
+  <p>There are no reviews. Be the first to review this product!</p>
+  <% end %>
+</article>

@@ -13,16 +13,20 @@
       <div class="mr3 ml3">
         <% if current_user %>
           <p>Welcome <%= current_user.email %> |
+          <% if isAdmin? %>
+            <%= link_to "admin dashboard", rails_admin_path %>
+          <%end %> |
           <%= link_to "products", instruments_path %> |
             <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
           </p>
         <% else %>
-          <%= link_to "sign up", new_user_registration_path %>
+          <%= link_to "products", instruments_path %> |
+          <%= link_to "sign up", new_user_registration_path %> |
           <%= link_to "sign in", new_user_session_path %>
         <% end %>
       </div>
-      <hr>
     </div>
+
     <% if notice %>
       <div class="flex items-center justify-center pa4 bg-lightest-blue navy">
         <svg class="w1" data-icon="info" viewBox="0 0 32 32" style="fill:currentcolor">

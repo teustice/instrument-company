@@ -15,7 +15,23 @@
  *= require tachyons
  */
 
- .inst-tile {
-   width: 400px;
-   height: 400px;
+ .navbar {
+  background-color: black;
+  color: white;
+  height: 40px;
+ }
+
+ .navbar p {
+   margin-top: 0;
+   padding-top: 10px;
+ }
+
+ .navbar a {
+   text-decoration: none;
+ }
+ .navbar a {
+   color: grey;
+ }
+ .navbar a:hover {
+   color: white;
  }
