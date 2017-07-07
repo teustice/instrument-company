@@ -14,3 +14,8 @@
  *= require_self
  *= require tachyons
  */
+
+ .inst-tile {
+   width: 400px;
+   height: 400px;
+ }

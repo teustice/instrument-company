@@ -10,20 +10,38 @@
 
   <body>
     <div class="navbar">
-      <% if current_user %>
-        <p>Welcome <%= current_user.email %> |
-        <%= link_to "explore", instruments_path %> 
- |
-          <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
-        </p>
-      <% else %>
-        <%= link_to "sign up", new_user_registration_path %>
-        <%= link_to "sign in", new_user_session_path %>
-      <% end %>
+      <div class="mr3 ml3">
+        <% if current_user %>
+          <p>Welcome <%= current_user.email %> |
+          <%= link_to "products", instruments_path %> |
+            <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
+          </p>
+        <% else %>
+          <%= link_to "sign up", new_user_registration_path %>
+          <%= link_to "sign in", new_user_session_path %>
+        <% end %>
+      </div>
       <hr>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <% if notice %>
+      <div class="flex items-center justify-center pa4 bg-lightest-blue navy">
+        <svg class="w1" data-icon="info" viewBox="0 0 32 32" style="fill:currentcolor">
+          <title>info icon</title>
+          <path d="M16 0 A16 16 0 0 1 16 32 A16 16 0 0 1 16 0 M19 15 L13 15 L13 26 L19 26 z M16 6 A3 3 0 0 0 16 12 A3 3 0 0 0 16 6"></path>
+        </svg>
+        <span class="lh-title ml3"><%= notice %></span>
+      </div>
+    <% elsif alert %>
+      <div class="flex items-center justify-center pa4 bg-light-red navy">
+        <svg class="w1" data-icon="info" viewBox="0 0 32 32" style="fill:currentcolor">
+          <title>info icon</title>
+          <path d="M16 0 A16 16 0 0 1 16 32 A16 16 0 0 1 16 0 M19 15 L13 15 L13 26 L19 26 z M16 6 A3 3 0 0 0 16 12 A3 3 0 0 0 16 6"></path>
+        </svg>
+        <span class="lh-title ml3"><%= alert %></span>
+      </div>
+    <% end %>
+    <div class="mr3 ml3">
+      <%= yield %>
+    </div>
   </body>
 </html>

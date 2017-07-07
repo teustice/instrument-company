@@ -1,6 +1,17 @@
-<h1>instrument gallery</h1>
+<h1>Instruments:</h1>
+<section class="cf w-100 pa2-ns">
 <% @instruments.each do |instrument| %>
-  <%= link_to image_tag(instrument.image), instrument_path(instrument) %>
-  <%= instrument.description  %>
-  <%= instrument.price  %>
+  <%= link_to instrument_path(instrument) do %>
+    <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
+      <div class="aspect-ratio aspect-ratio--1x1">
+        <img style="background-image:url(<%=instrument.image%>);"
+        class="db bg-center cover aspect-ratio--object" />
+      </div>
+      <a href="#0" class="ph2 ph0-ns pb3 link db">
+        <h3 class="f5 f4-ns mb0 black-90"><%= instrument.brand %></h3>
+        <h3 class="f6 f5 fw4 mt2 black-60">$<%= instrument.price %></h3>
+      </a>
+    </article>
+  <% end %>
 <% end %>
+</section>
